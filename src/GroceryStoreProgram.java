@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;
+
 
 public class GroceryStoreProgram {
 
@@ -34,6 +36,10 @@ public class GroceryStoreProgram {
                 (tomatoPrice * tomatoKilos) + (bananaPrice * bananaKilos) +
                 (eggplantPrice * eggplantKilos);
 
-        System.out.println("Total Cost : " + totalCost + " TL");
+        // Format and print with 2 decimal places
+        DecimalFormat df = new DecimalFormat("#.00");
+        String formattedTotalCost = df.format(totalCost);
+
+        System.out.println("Total Cost : " + formattedTotalCost + " TL");
     }
 }
